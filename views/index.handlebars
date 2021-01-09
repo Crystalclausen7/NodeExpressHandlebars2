@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baD141NQApFm15MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+<div class='container '>
+    <img class="d-flex ml-auto mr-auto" src="/asset/image/burgericon.png" alt="burger"/>
+    <h1 class= "text-center">Burgers!</h1>
+
+
+    <div class="row">
+        <div class='col-md-6'>
+
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>
+                    {{burger_name}}
+                    <buttonn class="change-devoured" data-id="{{this.id}}">devour it!</buttonn>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+
+
+        </div>
+
+        <div class='col-md-6'>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="text-center">
+
+        <h2>Add a Burger</h2>
+        <form class="create-form d-flex justify-content-center">
+            <div class="row">
+                <div class="form-group">
+                    <label for="ca">Burger Name:</label>
+                    <button type="submit">add</button>
+                </div>
+
+                </form>
+
+    </div>
+</div>
+
+</div>
+
+</div>
